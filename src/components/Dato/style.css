@@ -1,15 +1,21 @@
 #datoContainer {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
-    
+    flex-grow: 1;
 }
 
 #resultado {
-    width: 50%;
+    min-width: 170px;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 20px;
     color: white;
+    margin-left: 10px;
+    border: 1px solid white;
 }   
+
+@media screen and (max-width: 840px) {
+    #datoContainer{
+        flex-grow: 0;
+    }
+}

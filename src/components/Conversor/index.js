@@ -3,7 +3,7 @@ import './style.css';
 import InputDatos from "../Input"
 import ResulDatos from "../Dato"
 
-export default class index extends Component {
+export default class conversor extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -11,21 +11,21 @@ export default class index extends Component {
             result:'',
             origen:true
         }
-        this.handleClick = this.handleClick.bind(this);
     }
     
     conversion = (newValue) => {
-    if(this.state.origen){
-        var resultado = newValue * 166.386;
-        this.setState({value:newValue, result:resultado.toFixed(2)})
-    }else{
-        var resultado = newValue / 166.386;
-        this.setState({value:newValue, result:resultado.toFixed(2)})
-    }
+    if(!isNaN(Number(newValue))){
+        if(this.state.origen){
+            var resultado = newValue * 166.386;
+            this.setState({value:newValue, result:resultado.toFixed(2)})
+        }else{
+            var resultado = newValue / 166.386;
+            this.setState({value:newValue, result:resultado.toFixed(2)})
+        }}
     }
 
-    handleClick() {
-        this.setState({origen:!this.state.origen})
+    handleClick = () => {
+        this.setState({origen:!this.state.origen, value:"", result:""})
     }
 
     render() {

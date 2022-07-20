@@ -12,12 +12,30 @@
 
 #datos{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
     margin-top: 50px;
+    width: 90%;
 }
 
 button{
-    width: 60%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    font-size: large;
+}
+
+@media screen and (max-width: 840px) {
+    #datos{
+        flex-direction: column;
+        height: 300px;
+    }
+
+    button{
+        order:3;
+        margin-top: 70px;
+        width: 200px;
+        border-radius: 20px;
+    }
 }

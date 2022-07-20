@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const InputDatos = ({origen, conversion}) => {
+const InputDatos = ({value, origen, conversion}) => {
     const handleChange = (event) => {
         conversion(event.target.value);
     }
@@ -11,7 +11,7 @@ const InputDatos = ({origen, conversion}) => {
     return (
         <div id="inputContainer">
             <div>{textOrigen}</div>
-            <input type="text" onChange={handleChange}></input>
+            <input type="text" onChange={handleChange} value={value}></input>
         </div>
     )
 }
