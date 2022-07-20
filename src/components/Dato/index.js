@@ -1,12 +1,16 @@
 import React from "react";
 import "./style.css";
 
-const Dato = () => {
+const ResulDatos = ({origen, result}) => {
+
+    var textOrigen = origen ? "Pelas" : "€";
+
     return (
-        <div id='datoContainer'>Pesetas
-            <div id='resultado'></div>
+        <div id="datoContainer">
+            <div>{textOrigen}</div>
+            <div id="resultado">{result}</div>
         </div>
-    );
+    )
 }
 
-export default Dato;
+export default ResulDatos;
